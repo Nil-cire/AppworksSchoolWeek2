@@ -1,1 +1,45 @@
+// AppWorks School Homework of Android - Week 2
 
+
+//Q1. What is inheritance?
+-> 在物件導向的程式語言中，以類別(class)來定義同一種物件所含有的各項屬性。當一個新的類別具有一的既有類別相同的屬性時，可以子類別(subclass)的
+   方式繼承(inheritance)既有類別(父類別)的資料，子類別會繼承父類別的屬性與函數，並且可以基於該基礎新增子類別特有的屬性與函數。
+
+
+//Q2. How to ​split​ a string in Android? Explain your understanding, and even better to attach some sample code.
+-> With the split() function, a string can be split into a List in Kotlin
+
+   example :
+   val str = "Here is an example"
+   val list = str.split(' ') // split with the space bar(' ')
+   println(list) => [Here, is, an, example]
+
+
+//Q3. What kind of ​key-value​ pair collection do we use in Android? Attach a sample code that uses for-loop to print
+      each key-value pair.
+-> "Map" is the ​key-value​ pair collection used in Android.
+
+   example :
+   val fruitMap = mapOf("A" to "apple", "B" to "Banana", "C" to "cherry")
+   for ((key, value) in fruitMap) {
+        println("$key stand for $value")
+   }
+
+
+//Q4. What’s the ​difference​ between ArrayList and LinkedList? Try to explain in Mandarin.
+-> 1. 資料讀取差異 : ArrayList 的資料結構為 Array(陣列)，採用隨機存取，在取得資料時可以索引的方式直接取得該值，LinkedList 的資料結構為
+      鏈結串列，每個資料包含本身的資料與另一個資料的位置資訊，串聯而成，讀取資料時需要從頭搜尋到需要的值，因此讀取數度較慢。
+   2. 檔案存入差異 : LinkedList 在新增或刪除資料時，僅需要調整該筆資料與其節點資訊，ArrayList則需要刪除該筆資料後的所有資料與節點，並重新
+      賦予索引值，因此效率較差。
+
+
+//Q5. What are ​Value Type​ variables? List out the Value Type variables you know.
+->The value type variables are number classes like integer and float.
+  for integer, types are Byte, Short, Int, Long
+  for float, types are Double and Float
+
+
+//Q6. What’s the ​maximum​ value of ​Int​? If you want to represent integers larger than the limit,
+      what should you do instead of using int variables?
+-> The value range of "Int" is "-2,147,483,648 (-2*E^31) to 2,147,483,647 (2*E^31 - 1)(maximum value)",
+   if exceed this value, the value type should be declare as "Long".
